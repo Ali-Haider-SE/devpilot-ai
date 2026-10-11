@@ -30,3 +30,5 @@ curl -i localhost:3000/health/ready
 - `packages/shared-types` envelope/error-code/health types shared with the future frontend
 - `docker/api/Dockerfile`, `docker-compose.yml`
 - `docs/` requirements audit, architecture notes
+
+GitHub sync test
