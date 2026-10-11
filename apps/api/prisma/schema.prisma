@@ -1,0 +1,10 @@
+// Phase 1: connection + tooling only. Domain models arrive with Phase 2+ migrations.
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}

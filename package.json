@@ -1,0 +1,16 @@
+{
+  "name": "devpilot-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:types": "npm run build -w @devpilot/shared-types",
+    "prisma:generate": "npm run prisma:generate -w @devpilot/api",
+    "build": "npm run build:types && npm run prisma:generate && npm run build -w @devpilot/api",
+    "typecheck": "npm run build:types && npm run prisma:generate && npm run typecheck -w @devpilot/api",
+    "lint": "npm run lint -w @devpilot/api",
+    "test": "npm run build:types && npm run prisma:generate && npm run test -w @devpilot/api",
+    "start:dev": "npm run build:types && npm run start:dev -w @devpilot/api"
+  }
+}
